@@ -6,3 +6,46 @@ output:
     toc_float: true
 ---
 
+## Education
+
+**Columbia University**  Biostatistics, School of Public Health
+
+**Tianjin Universit** Biology, School of Life Science 
+
+## Intern
+
+**Part Time Assistant in L.E.K consulting**
+
++ Participate in a rare disease drug market entry and pricing project, understanding the negotiation process and pricing model for original high-value drugs entering the Chinese market
+
++ Assist consultants with desk research and conduct in-depth expert interviews on the physician side and payor side with 30 + meeting notes
+
+
+**Consulting Intern in Ipsos Business Consulting, Strategy Team**
+
++ Deeply involved in a medical digitalization project of a leading foreign equipment company and analyze market competition 
+
++ Analyze business models of benchmark companies, and evaluate potential cooperation with emerging companies
+
++ Participate in weekly meetings with clients and internal review meetings, and record meeting summaries
+
++	Write discussion guides, participate in expert interview, build the report shell, and draw slides with the consultant's guidance
+
+
+## Research and Competition
+
+**Research Assistant | Advisor: Prof. Cong Liang | Project: “DNA methylation-based immune cell deconvolution in skin cutaneous melanoma (SKCM)”**
+
++ Analyzed the infiltration intensity of B immune cells in from TCGA public database by Gene Set Enrichment Analysis
+
++ Implemented cross-validation method to verify the effect of different parameters on regression 
+
++	Built Elastic Net (lasso + ridge regression) in R and ruled out the Pearson correlation step. Confirmed the estimated levels of tumor infiltrated immune cells based on methylation and gene expression data achieved high concordance
+
+**Project: “Biological Preparation and Modeling of CRISPR-Cas12a for Gene and Disease Detection” | Competition: International Genetically Engineered Machine competition (iGEM) **
+
++	In Boston, as a team representative, make a presentation in English to show the research results, takes questions from referees, and communicates with more than 300 teams from all over the world 
+
++	Assisted in the dynamic model of heavy medal detection biosensor and the energy model of off-target problem
+
+

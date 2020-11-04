@@ -7,7 +7,7 @@ output:
 ---
 # Introduction
 
-My name is Xinyi Wang. You can find more information about me [here](about.html).
+My name is Xinyi Wang. You can find more information about my resume [here](about.html).
 
 # Pet
 
