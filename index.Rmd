@@ -1,0 +1,16 @@
+---
+title: "Welcome to my website!"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+# Introduction
+
+My name is Xinyi Wang. You can find more information about me [here](about.html).
+
+# Pet
+
+I had two Akitas. They love watching me when I practise Chinese hand writing.
+
+<img src= "image/dog.jpeg" style="width:75%">

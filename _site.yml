@@ -1,0 +1,16 @@
+name: "Yay internet!"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+   - text: "About"
+     href: about.html
+   - icon: fa-envelope fa-lg
+     href: mailto:<xw2758@cumc.columbia.edu>
+   - icon: fa-github fa-lg
+     href: http://github.com/xw2758/
+   - icon: fa-linkedin fa-lg
+     href: https://www.linkedin.com/in/xinyi-wang-a98223183/
+output:
+   html_document:
+     theme: cerulean
