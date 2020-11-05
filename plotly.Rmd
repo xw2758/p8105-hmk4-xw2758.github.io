@@ -1,0 +1,30 @@
+---
+title: "NYC Restaurant Inspection"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+First, we look at NYC Restaurant Inspection data.
+
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+
+```{r}
+data(rest_inspec)
+
+rest_inspec = 
+ rest_inspec %>%
+ filter(
+  boro
+ )
+drop_na(score)
+ 
+ 
+```
+
