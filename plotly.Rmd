@@ -1,14 +1,15 @@
----
-title: "NYC Restaurant Inspection"
+ ---
+title: "dashboard"
 output: 
-  html_document:
-    toc: true
-    toc_float: true
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
 ---
 
-First, we look at NYC Restaurant Inspection data.
 
-```{r}
+```{r setup, include=FALSE}
+library(flexdashboard)
 library(tidyverse)
 library(p8105.datasets)
 library(plotly)
@@ -16,15 +17,63 @@ library(plotly)
 
 
 ```{r}
-data(rest_inspec)
+data(ny_noaa)
 
-rest_inspec = 
- rest_inspec %>%
- filter(
-  boro
- )
-drop_na(score)
- 
- 
+ny_noaa = 
+ ny_noaa %>%
+ separate(date, into = c("year", "month", "day"), sep = "-") %>% 
+ filter(id == "USC00300023"	) %>% 
+  mutate(
+    prcp = prcp/10,
+    snow = snow/10,
+    snwd = snwd/10,
+    
+    tmax = as.numeric(tmax)/10,
+    tmin = as.numeric(tmin)/10
+  ) %>% 
+ drop_na(prcp, snow, snwd, tmax, tmin) 
 ```
 
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+This is a scatter plot about snowfall(mm) and min temperature.
+
+```{r}
+ny_noaa %>% 
+  mutate(text_label =str_c("snow:", snow)) %>% 
+  plot_ly(x = ~tmin, y = ~snow, alpha = 0.3, 
+          text = ~text_label, type = "scatter", mmode = "markers") %>% 
+   layout(title = "scatter plot about Precipitation(mm) and year",
+         xaxis = list(title = "min temperature(C)"),
+         yaxis = list(title = "Snowfall(mm)"))
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+This is a box plot about Precipitation(mm) and year.
+
+```{r}
+ny_noaa %>% 
+  plot_ly(y = ~prcp, x = ~year, color = ~year, type = "box", colors = "viridis") %>% 
+    layout(title = "scatter plot about Precipitation(mm) and year",
+         xaxis = list(title = "Precipitation(mm)"))
+```
+
+### Chart C
+
+This is a bar chart of Max temperature(C) in different years.
+
+```{r }
+ny_noaa %>% 
+  plot_ly(
+    x = ~year, y = ~tmax, colors = "viridis", type = "bar", alpha = .5
+  ) %>% 
+    layout(title = "Max temperature(C) in different years",
+           yaxis = list(title = "Average max temperature(C)"))
+```
